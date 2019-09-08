@@ -2,19 +2,15 @@
 
 ## 概要
 
-```bash
-composer create-project slim/slim-skeleton slim-sample
-```
-
-このサンプルコードは、上記のコマンドを実行し、 Slim Framework のスケルトンをインストールしたものに、いくつかMiddlewareを追加してあります。
+このサンプルコードは、Slim Framework のスケルトンをインストールしたものに、いくつかMiddlewareを追加してあります。
 
 追加したMiddlewareと、それぞれコミットした内容は、以下になります。
 * AdditionalResponseHeaderMiddleware
   * 独自のHTTPレスポンスヘッダーを出力するMiddleware
-  * コミット内容→  9e660ed678e34fadbf28f54a0e916bfb930ae88a
+  * コミット内容→  [9e660ed](https://github.com/nauleyco/slim-sample/commit/9e660ed678e34fadbf28f54a0e916bfb930ae88a)
 * MaintenanceMiddleware
   * メンテナンス中にするMiddleware
-  * コミット内容→  730278a2416e15a903e2f2f1ebf2181c9b437877
+  * コミット内容→  [730278a](https://github.com/nauleyco/slim-sample/commit/730278a2416e15a903e2f2f1ebf2181c9b437877)
  
  参考：Slimのスケルトンのリポジトリ < https://github.com/slimphp/Slim-Skeleton >
 
