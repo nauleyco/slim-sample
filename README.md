@@ -1,40 +1,35 @@
-# Slim Framework 4 Skeleton Application
+# Slimで学ぶMiddleware入門 サンプルコード
 
-Use this skeleton application to quickly setup and start working on a new Slim Framework 4 application. This application uses the latest Slim 4 with Slim PSR-7 implementation and PHP-DI container implementation. It also uses the Monolog logger.
-
-This skeleton application was built for Composer. This makes setting up a new Slim Framework application quick and easy.
-
-## Install the Application
-
-Run this command from the directory in which you want to install your new Slim Framework application.
+## 概要
 
 ```bash
-composer create-project slim/slim-skeleton [my-app-name]
+composer create-project slim/slim-skeleton slim-sample
 ```
 
-Replace `[my-app-name]` with the desired directory name for your new application. You'll want to:
+このサンプルコードは、上記のコマンドを実行し、 Slim Framework のスケルトンをインストールしたものに、いくつかMiddlewareを追加してあります。
 
-* Point your virtual host document root to your new application's `public/` directory.
-* Ensure `logs/` is web writable.
+追加したMiddlewareと、それぞれコミットした内容は、以下になります。
+* AdditionalResponseHeaderMiddleware
+  * 独自のHTTPレスポンスヘッダーを出力するMiddleware
+  * コミット内容→  9e660ed678e34fadbf28f54a0e916bfb930ae88a
+* MaintenanceMiddleware
+  * メンテナンス中にするMiddleware
+  * コミット内容→  730278a2416e15a903e2f2f1ebf2181c9b437877
+ 
+ 参考：Slimのスケルトンのリポジトリ < https://github.com/slimphp/Slim-Skeleton >
 
-To run the application in development, you can run these commands 
+
+## プログラムの動作確認方法
+
+このリポジトリをcloneまたはzipダウンロードし、slim-sampleディレクトリ内で、composer installしてから、ビルトインサーバーをたちあげてください。<br>
+[composer](https://getcomposer.org/) は、あらかじめインストールしておいてください。
 
 ```bash
-cd [my-app-name]
-composer start
+$ git clone git@github.com:nauleyco/slim-sample.git
+$ cd slim-sample
+$ composer install
+$ php -S localhost:8080 -t public public/index.php
 ```
 
-Or you can use `docker-compose` to run the app with `docker`, so you can run these commands:
-```bash
-cd [my-app-name]
-docker-compose up -d
-```
-After that, open `http://0.0.0.0:8080` in your browser.
+その後、ブラウザで、 http://localhost:8080/users にアクセスしてください。
 
-Run this command in the application directory to run the test suite
-
-```bash
-composer test
-```
-
-That's it! Now go build something cool.
